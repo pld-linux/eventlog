@@ -18,8 +18,8 @@ Where you had a simple non-structrured string in syslog() you have a
 combination of description and tag/value pairs.
 
 EventLog provides an interface to build, format and output an event
-record. The exact format and output method can be customized by
-the administrator via a configuration file.
+record. The exact format and output method can be customized by the
+administrator via a configuration file.
 
 %package devel
 Summary:	Header files for eventlog
@@ -62,11 +62,11 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post 
-aaa
+#%post
+#aaa
 
-%postun
-aaa
+#%postun
+#aaa
 
 %files
 %defattr(644,root,root,755)
