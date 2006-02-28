@@ -1,7 +1,7 @@
 Summary:	EventLog library - a replacement of the simple syslog() API
 Name:		eventlog
 Version:	0.2.4
-Release:	0.1
+Release:	1
 License:	BSD-like
 Group:		Libraries
 Source0:	http://www.balabit.com/downloads/syslog-ng/1.9/src/%{name}-%{version}.tar.gz
@@ -62,11 +62,8 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-#%post
-#aaa
-
-#%postun
-#aaa
+%post -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
