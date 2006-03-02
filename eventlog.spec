@@ -1,4 +1,5 @@
 Summary:	EventLog library - a replacement of the simple syslog() API
+Summary(pl):	Biblioteka EventLog - zamiennik prostego API syslog()
 Name:		eventlog
 Version:	0.2.4
 Release:	1
@@ -21,9 +22,21 @@ EventLog provides an interface to build, format and output an event
 record. The exact format and output method can be customized by the
 administrator via a configuration file.
 
+%description -l pl
+Celem biblioteki EventLog jest zast±pienie prostego API syslog()
+dostêpnego w systemach uniksowych. G³ówn± ró¿nic± miêdzy EventLogiem a
+syslogiem jest to, ¿e EventLog próbuje dodaæ do komunikatów strukturê.
+
+Tam, gdzie w API syslog() by³ prosty ³añcuch bez struktury, mamy
+po³±czenie opisu i par znacznik/warto¶æ.
+
+EvengLog udostêpnia interfejs do tworzenia, formatowania i
+wyprowadzania rekordu zdarzenia. Dok³adny format i metoda wyj¶ciowa
+mo¿e byæ dostosowana przez administratora poprzez plik konfiguracyjny.
+
 %package devel
 Summary:	Header files for eventlog
-Summary(pl):	Pliki nag³ówkowe do eventlog
+Summary(pl):	Pliki nag³ówkowe biblioteki eventlog
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -31,7 +44,7 @@ Requires:	%{name} = %{version}-%{release}
 Header files for eventlog.
 
 %description devel -l pl
-Pliki nag³ówkowe do eventlog.
+Pliki nag³ówkowe biblioteki eventlog.
 
 %package static
 Summary:	Static eventlog library
@@ -62,8 +75,8 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
@@ -73,11 +86,11 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %doc doc/{API,DESIGN}.txt
-%{_pkgconfigdir}/*
+%attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
 %dir %{_includedir}/eventlog
 %{_includedir}/eventlog/*
-%attr(755,root,root) %{_libdir}/lib*.la
-%attr(755,root,root) %{_libdir}/lib*.so
+%{_pkgconfigdir}/*
 
 %files static
 %defattr(644,root,root,755)
