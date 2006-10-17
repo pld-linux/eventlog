@@ -1,12 +1,12 @@
 Summary:	EventLog library - a replacement of the simple syslog() API
 Summary(pl):	Biblioteka EventLog - zamiennik prostego API syslog()
 Name:		eventlog
-Version:	0.2.4
+Version:	0.2.5
 Release:	1
 License:	BSD-like
 Group:		Libraries
-Source0:	http://www.balabit.com/downloads/syslog-ng/1.9/src/%{name}-%{version}.tar.gz
-# Source0-md5:	d4f6137da17212c69d6ab9cd35926a0a
+Source0:	http://www.balabit.com/downloads/syslog-ng/2.0/src/%{name}-%{version}.tar.gz
+# Source0-md5:	a6bdba91f88540cc69b398fd138d86cd
 URL:		http://www.balabit.com/products/syslog_ng/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
