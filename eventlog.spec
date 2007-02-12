@@ -1,5 +1,5 @@
 Summary:	EventLog library - a replacement of the simple syslog() API
-Summary(pl):	Biblioteka EventLog - zamiennik prostego API syslog()
+Summary(pl.UTF-8):   Biblioteka EventLog - zamiennik prostego API syslog()
 Name:		eventlog
 Version:	0.2.5
 Release:	1
@@ -22,40 +22,40 @@ EventLog provides an interface to build, format and output an event
 record. The exact format and output method can be customized by the
 administrator via a configuration file.
 
-%description -l pl
-Celem biblioteki EventLog jest zast±pienie prostego API syslog()
-dostêpnego w systemach uniksowych. G³ówn± ró¿nic± miêdzy EventLogiem a
-syslogiem jest to, ¿e EventLog próbuje dodaæ do komunikatów strukturê.
+%description -l pl.UTF-8
+Celem biblioteki EventLog jest zastÄ…pienie prostego API syslog()
+dostÄ™pnego w systemach uniksowych. GÅ‚Ã³wnÄ… rÃ³Å¼nicÄ… miÄ™dzy EventLogiem a
+syslogiem jest to, Å¼e EventLog prÃ³buje dodaÄ‡ do komunikatÃ³w strukturÄ™.
 
-Tam, gdzie w API syslog() by³ prosty ³añcuch bez struktury, mamy
-po³±czenie opisu i par znacznik/warto¶æ.
+Tam, gdzie w API syslog() byÅ‚ prosty Å‚aÅ„cuch bez struktury, mamy
+poÅ‚Ä…czenie opisu i par znacznik/wartoÅ›Ä‡.
 
-EvengLog udostêpnia interfejs do tworzenia, formatowania i
-wyprowadzania rekordu zdarzenia. Dok³adny format i metoda wyj¶ciowa
-mo¿e byæ dostosowana przez administratora poprzez plik konfiguracyjny.
+EvengLog udostÄ™pnia interfejs do tworzenia, formatowania i
+wyprowadzania rekordu zdarzenia. DokÅ‚adny format i metoda wyjÅ›ciowa
+moÅ¼e byÄ‡ dostosowana przez administratora poprzez plik konfiguracyjny.
 
 %package devel
 Summary:	Header files for eventlog
-Summary(pl):	Pliki nag³ówkowe biblioteki eventlog
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki eventlog
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for eventlog.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki eventlog.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki eventlog.
 
 %package static
 Summary:	Static eventlog library
-Summary(pl):	Biblioteka statyczna eventlog
+Summary(pl.UTF-8):   Biblioteka statyczna eventlog
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static eventlog library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka statyczna eventlog.
 
 %prep
