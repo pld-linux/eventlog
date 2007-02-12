@@ -1,5 +1,5 @@
 Summary:	EventLog library - a replacement of the simple syslog() API
-Summary(pl.UTF-8):   Biblioteka EventLog - zamiennik prostego API syslog()
+Summary(pl.UTF-8):	Biblioteka EventLog - zamiennik prostego API syslog()
 Name:		eventlog
 Version:	0.2.5
 Release:	1
@@ -36,7 +36,7 @@ może być dostosowana przez administratora poprzez plik konfiguracyjny.
 
 %package devel
 Summary:	Header files for eventlog
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki eventlog
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki eventlog
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -48,7 +48,7 @@ Pliki nagłówkowe biblioteki eventlog.
 
 %package static
 Summary:	Static eventlog library
-Summary(pl.UTF-8):   Biblioteka statyczna eventlog
+Summary(pl.UTF-8):	Biblioteka statyczna eventlog
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
