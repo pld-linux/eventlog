@@ -1,12 +1,12 @@
 Summary:	EventLog library - a replacement of the simple syslog() API
 Summary(pl.UTF-8):	Biblioteka EventLog - zamiennik prostego API syslog()
 Name:		eventlog
-Version:	0.2.5
-Release:	2
+Version:	0.2.7
+Release:	1
 License:	BSD-like
 Group:		Libraries
-Source0:	http://www.balabit.com/downloads/syslog-ng/2.0/src/%{name}-%{version}.tar.gz
-# Source0-md5:	a6bdba91f88540cc69b398fd138d86cd
+Source0:	http://www.balabit.com/downloads/files/syslog-ng/sources/stable/src/%{name}-%{version}.tar.gz
+# Source0-md5:	51ac5bff610194ad57f3d632277bdf49
 URL:		http://www.balabit.com/products/syslog_ng/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -81,17 +81,17 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc doc/configuration.txt AUTHORS COPYING CREDITS NEWS PORTS README ChangeLog
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libevtlog.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libevtlog.so.0
 
 %files devel
 %defattr(644,root,root,755)
 %doc doc/{API,DESIGN}.txt
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
-%dir %{_includedir}/eventlog
-%{_includedir}/eventlog/*
-%{_pkgconfigdir}/*
+%attr(755,root,root) %{_libdir}/libevtlog.so
+%{_libdir}/libevtlog.la
+%{_includedir}/eventlog
+%{_pkgconfigdir}/eventlog.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libevtlog.a
