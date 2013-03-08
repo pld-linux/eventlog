@@ -1,12 +1,14 @@
+%define	snap	20120504+1700
 Summary:	EventLog library - a replacement of the simple syslog() API
 Summary(pl.UTF-8):	Biblioteka EventLog - zamiennik prostego API syslog()
 Name:		eventlog
 Version:	0.2.12
-Release:	1
+Release:	2
 License:	BSD-like
 Group:		Libraries
-Source0:	http://www.balabit.com/downloads/files/syslog-ng/sources/3.2.4/source/%{name}_%{version}.tar.gz
-# Source0-md5:	434be9ca7fe4377cd70fa9371efe5488
+#Source0:	http://www.balabit.com/downloads/files/syslog-ng/sources/3.2.4/source/%{name}_%{version}.tar.gz
+Source0:	http://www.balabit.com/downloads/files/syslog-ng/sources/3.4.1/source/%{name}_%{version}+%{snap}.tar.gz
+# Source0-md5:	a044b1cd097613c3c1d09c4a7de51c43
 URL:		http://www.balabit.com/products/syslog_ng/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -59,7 +61,7 @@ Static eventlog library.
 Biblioteka statyczna eventlog.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}+%{snap}
 
 %build
 %configure
