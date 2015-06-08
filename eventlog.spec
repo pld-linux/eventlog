@@ -1,15 +1,14 @@
-%define	snap	20120504+1700
 Summary:	EventLog library - a replacement of the simple syslog() API
 Summary(pl.UTF-8):	Biblioteka EventLog - zamiennik prostego API syslog()
 Name:		eventlog
-Version:	0.2.12
-Release:	3
+Version:	0.2.13
+Release:	1
 License:	BSD-like
 Group:		Libraries
-#Source0:	http://www.balabit.com/downloads/files/syslog-ng/sources/3.2.4/source/%{name}_%{version}.tar.gz
-Source0:	http://www.balabit.com/downloads/files/syslog-ng/sources/3.4.1/source/%{name}_%{version}+%{snap}.tar.gz
-# Source0-md5:	a044b1cd097613c3c1d09c4a7de51c43
-URL:		http://www.balabit.com/products/syslog_ng/
+#Source0:	https://my.balabit.com/downloads/eventlog/0.2/%{name}_%{version}.tar.gz
+Source0:	https://my.balabit.com/downloads/syslog-ng/open-source-edition/3.4.2/source/%{name}_%{version}.tar.gz
+# Source0-md5:	68ec8d1ea3b98fa35002bb756227c315
+URL:		https://my.balabit.com/downloads/eventlog/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -61,7 +60,7 @@ Static eventlog library.
 Biblioteka statyczna eventlog.
 
 %prep
-%setup -q -n %{name}-%{version}+%{snap}
+%setup -q
 
 %build
 %configure
@@ -73,6 +72,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+# no external dependencies
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libevtlog.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -90,7 +92,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc doc/{API,DESIGN}.txt
 %attr(755,root,root) %{_libdir}/libevtlog.so
-%{_libdir}/libevtlog.la
 %{_includedir}/eventlog
 %{_pkgconfigdir}/eventlog.pc
 
