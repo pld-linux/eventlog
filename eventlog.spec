@@ -8,7 +8,7 @@ Group:		Libraries
 #Source0:	https://my.balabit.com/downloads/eventlog/0.2/%{name}_%{version}.tar.gz
 Source0:	https://my.balabit.com/downloads/syslog-ng/open-source-edition/3.5.0beta1/source/%{name}_%{version}.tar.gz
 # Source0-md5:	c4b0dca3f3d558d41b67d7e6ad663584
-URL:		https://my.balabit.com/downloads/eventlog/
+URL:		https://github.com/balabit/eventlog
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
